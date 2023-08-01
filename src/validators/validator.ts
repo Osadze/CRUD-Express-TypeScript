@@ -12,7 +12,7 @@ class RingValidator {
         .notEmpty()
         .withMessage('Description required')
         .isString(),
-      body('image_Url').notEmpty().withMessage('Image_Url required').isString(),
+      body('image_url').notEmpty().withMessage('image_url required').isString(),
     ];
   }
   checkGetRings() {

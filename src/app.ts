@@ -12,7 +12,7 @@ const port = 3001;
 
 app.use(express.json());
 
-app.use('/api/v1/ring', ringRouter);
+app.use('/api/v1', ringRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}/`);

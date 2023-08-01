@@ -6,34 +6,34 @@ import RingController from '../controllers/ring';
 const router = express.Router();
 
 router.post(
-  '/create',
+  '/rings',
   RingValidator.checkCreateAndUpdateRing(),
   Middleware.handleValidationError,
   RingController.create
 );
 
 router.get(
-  '/read',
+  '/rings',
   RingValidator.checkGetRings(),
   Middleware.handleValidationError,
   RingController.getAll
 );
 router.get(
-  '/read/:id',
+  '/rings/:id',
   RingValidator.checkIdParam(),
   Middleware.handleValidationError,
   RingController.getById
 );
 
 router.patch(
-  '/update/:id',
+  '/rings/:id',
   RingValidator.checkIdParam(),
   RingValidator.checkCreateAndUpdateRing(),
   Middleware.handleValidationError,
   RingController.update
 );
 router.delete(
-  '/delete/:id',
+  '/rings/:id',
   RingValidator.checkIdParam(),
   Middleware.handleValidationError,
   RingController.delete

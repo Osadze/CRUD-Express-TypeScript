@@ -1,9 +1,8 @@
 import { DataTypes, Model } from 'sequelize';
 import db from '../config/db.config';
-import { RingAttributes } from '../types/types';
+import { Ring } from '../types/types';
 
-
-export class RingInstance extends Model<RingAttributes> {}
+export class RingInstance extends Model<Ring> {}
 RingInstance.init(
   {
     id: {
@@ -19,7 +18,7 @@ RingInstance.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    image_Url: {
+    image_url: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -27,5 +26,6 @@ RingInstance.init(
   {
     sequelize: db,
     tableName: 'rings',
+    timestamps: false,
   }
 );
